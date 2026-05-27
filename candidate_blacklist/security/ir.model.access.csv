@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_recruitment_candidate_blacklist_user,recruitment.candidate.blacklist.user,model_recruitment_candidate_blacklist,base.group_user,1,1,1,0
+access_recruitment_candidate_blacklist_manager,recruitment.candidate.blacklist.manager,model_recruitment_candidate_blacklist,base.group_system,1,1,1,1
+access_recruitment_blacklist_reason_user,recruitment.blacklist.reason.user,model_recruitment_blacklist_reason,base.group_user,1,0,0,0
+access_recruitment_blacklist_reason_manager,recruitment.blacklist.reason.manager,model_recruitment_blacklist_reason,base.group_system,1,1,1,1
+access_recruitment_blacklist_wizard_user,recruitment.blacklist.wizard.user,model_recruitment_blacklist_wizard,base.group_user,1,1,1,1
+access_recruitment_remove_blacklist_wizard_user,recruitment.remove.blacklist.wizard.user,model_recruitment_remove_blacklist_wizard,base.group_user,1,1,1,1
