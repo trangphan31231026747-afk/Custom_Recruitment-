@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_recruitment_request_user,recruitment.request.user,model_recruitment_request,base.group_user,1,1,1,1
+access_send_to_ceo_wizard,send.to.ceo.wizard,model_send_to_ceo_wizard,base.group_user,1,1,1,1
+access_ceo_reject_wizard,ceo.reject.wizard,model_ceo_reject_wizard,base.group_user,1,1,1,1
+access_hr_feedback_wizard,hr.feedback.wizard,model_hr_feedback_wizard,base.group_user,1,1,1,1

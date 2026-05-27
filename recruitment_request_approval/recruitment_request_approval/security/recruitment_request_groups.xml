@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="group_recruitment_hm" model="res.groups">
+        <field name="name">Hiring Manager</field>
+    </record>
+
+    <record id="group_recruitment_hr" model="res.groups">
+        <field name="name">Recruitment HR</field>
+    </record>
+
+    <record id="group_recruitment_ceo" model="res.groups">
+        <field name="name">Recruitment CEO</field>
+    </record>
+
+</odoo>
