@@ -1,0 +1,32 @@
+<odoo>
+    <record id="view_hr_applicant_form_inherit_matching" model="ir.ui.view">
+
+        <field name="name">hr.applicant.form.matching.inherit</field>
+
+        <field name="model">hr.applicant</field>
+
+        <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
+
+        <field name="arch" type="xml">
+
+            <xpath expr="//sheet/group" position="inside">
+
+                <group string="Requirement Matching">
+
+                    <field name="matching_score" readonly="1"/>
+
+                    <field name="matching_result"
+                           widget="badge"
+                           decoration-success="matching_result == 'suitable'"
+                           decoration-warning="matching_result == 'review'"
+                           decoration-danger="matching_result == 'unsuitable'"
+                           readonly="1"/>
+
+                </group>
+
+            </xpath>
+
+        </field>
+
+    </record>
+</odoo>
