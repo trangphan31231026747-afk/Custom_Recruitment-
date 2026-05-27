@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_hr_job_form_inherit_requirement"
+            model="ir.ui.view">
+
+        <field name="name">hr.job.form.requirement.inherit</field>
+
+        <field name="model">hr.job</field>
+
+        <field name="inherit_id"
+               ref="hr.view_hr_job_form"/>
+
+        <field name="arch"
+               type="xml">
+
+            <xpath expr="//notebook"
+                   position="inside">
+
+                <page string="Requirements">
+
+                    <group>
+
+                        <button name="action_save_requirements"
+                                type="object"
+                                string="Save Requirements"
+                                class="oe_highlight"/>
+
+                    </group>
+
+                    <group>
+
+                        <field name="total_weight"
+                               readonly="1"/>
+
+                    </group>
+
+                    <field name="requirement_ids">
+
+                        <tree editable="bottom">
+
+                            <field name="skill_id"/>
+
+                            <field name="skill_level"/>
+
+                            <field name="weight"/>
+
+                            <field name="description"/>
+
+                        </tree>
+
+                    </field>
+
+                </page>
+
+            </xpath>
+
+        </field>
+
+    </record>
+
+</odoo>
