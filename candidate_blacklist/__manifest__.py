@@ -1,0 +1,20 @@
+{
+    "name": "Candidate Blacklist Management",
+    "version": "1.0",
+    "category": "Human Resources/Recruitment",
+    "summary": "Add candidate blacklist management function to Recruitment",
+    "depends": ["hr_recruitment", "mail", "website_hr_recruitment"],
+    "data": [
+        "security/ir.model.access.csv",
+        "data/blacklist_reason_data.xml",
+        "views/blacklist_views.xml",
+        "views/blacklist_reason_views.xml",
+        "wizard/blacklist_wizard_views.xml",
+        "wizard/remove_blacklist_wizard_views.xml",
+        "views/hr_applicant_views.xml",
+        "views/website_templates.xml",
+    ],
+    "installable": True,
+    "application": False,
+    "license": "LGPL-3",
+}

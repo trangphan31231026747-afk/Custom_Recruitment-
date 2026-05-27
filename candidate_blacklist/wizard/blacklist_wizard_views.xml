@@ -1,0 +1,54 @@
+<odoo>
+    <record id="view_recruitment_blacklist_wizard_form" model="ir.ui.view">
+        <field name="name">recruitment.blacklist.wizard.form</field>
+        <field name="model">recruitment.blacklist.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Add Candidate to Blacklist">
+                <group>
+                    <group>
+                        <field name="applicant_id"/>
+                        <field name="candidate_name"/>
+                        <field name="email"/>
+                    </group>
+
+                    <group>
+                        <field name="phone"/>
+                        <field name="mobile"/>
+                        <field name="job_id"/>
+                        <field name="stage_id"/>
+                    </group>
+                </group>
+
+                <group string="Blacklist Reasons">
+                    <field
+                        name="reason_ids"
+                        widget="many2many_checkboxes"
+                        domain="[('active', '=', True)]"
+                    />
+
+                    <field
+                        name="other_reason"
+                        placeholder="Enter another reason if it is not listed above..."
+                    />
+
+                    <field name="note"/>
+                </group>
+
+                <footer>
+                    <button
+                        name="action_confirm_blacklist"
+                        type="object"
+                        string="Confirm Blacklist"
+                        class="btn-primary"
+                    />
+
+                    <button
+                        string="Cancel"
+                        special="cancel"
+                        class="btn-secondary"
+                    />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

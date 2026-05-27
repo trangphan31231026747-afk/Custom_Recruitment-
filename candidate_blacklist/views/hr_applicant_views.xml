@@ -1,0 +1,34 @@
+<odoo>
+    <record id="hr_applicant_view_form_blacklist" model="ir.ui.view">
+        <field name="name">hr.applicant.form.blacklist</field>
+        <field name="model">hr.applicant</field>
+        <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//header" position="inside">
+                <field name="is_blacklisted" invisible="1"/>
+                <field name="blacklist_count" invisible="1"/>
+                <field name="blacklist_warning" invisible="1"/>
+
+                <button name="action_open_blacklist_wizard"
+                        string="Add to Blacklist"
+                        type="object"
+                        class="btn-danger"
+                        invisible="is_blacklisted"/>
+
+                <button name="action_view_blacklist_records"
+                        string="View Blacklist"
+                        type="object"
+                        class="btn-secondary"
+                        invisible="not is_blacklisted"/>
+            </xpath>
+
+            <xpath expr="//sheet" position="inside">
+                <div class="alert alert-warning" role="alert" invisible="not is_blacklisted">
+                    <field name="blacklist_warning" readonly="1"/>
+                </div>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

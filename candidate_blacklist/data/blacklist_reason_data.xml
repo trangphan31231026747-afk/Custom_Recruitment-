@@ -1,0 +1,26 @@
+<odoo>
+    <record id="reason_no_show_multiple" model="recruitment.blacklist.reason">
+        <field name="name">Multiple interview no-shows</field>
+        <field name="description">The candidate confirmed the interview schedule but failed to attend multiple times without prior notice.</field>
+    </record>
+
+    <record id="reason_wrong_information" model="recruitment.blacklist.reason">
+        <field name="name">False or inaccurate information</field>
+        <field name="description">The candidate provided inaccurate information in the CV, application documents, or during the interview process.</field>
+    </record>
+
+    <record id="reason_unprofessional_attitude" model="recruitment.blacklist.reason">
+        <field name="name">Unprofessional attitude</field>
+        <field name="description">The candidate showed disrespectful language or behavior toward HR, interviewers, or the recruitment process.</field>
+    </record>
+
+    <record id="reason_no_onboarding" model="recruitment.blacklist.reason">
+        <field name="name">No-show on onboarding date</field>
+        <field name="description">The candidate confirmed the job offer but did not attend the onboarding date and did not provide any notice.</field>
+    </record>
+
+    <record id="reason_not_cooperate" model="recruitment.blacklist.reason">
+        <field name="name">Lack of cooperation during recruitment</field>
+        <field name="description">The candidate failed to complete required recruitment steps such as submitting additional documents, confirming information, following interview instructions, or completing assessments.</field>
+    </record>
+</odoo>

@@ -1,0 +1,126 @@
+<odoo>
+    <record id="view_recruitment_candidate_blacklist_tree" model="ir.ui.view">
+        <field name="name">recruitment.candidate.blacklist.tree</field>
+        <field name="model">recruitment.candidate.blacklist</field>
+        <field name="arch" type="xml">
+            <tree string="Candidate Blacklist">
+                <field name="candidate_name"/>
+                <field name="email"/>
+                <field name="phone"/>
+                <field name="mobile"/>
+                <field name="job_id"/>
+                <field name="stage_id"/>
+                <field name="state"/>
+                <field name="blacklisted_by"/>
+                <field name="blacklisted_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_recruitment_candidate_blacklist_form" model="ir.ui.view">
+        <field name="name">recruitment.candidate.blacklist.form</field>
+        <field name="model">recruitment.candidate.blacklist</field>
+        <field name="arch" type="xml">
+            <form string="Candidate Blacklist">
+                <header>
+                    <button name="action_remove_blacklist"
+                            string="Remove Blacklist"
+                            type="object"
+                            class="btn-primary"
+                            invisible="state != 'active'"/>
+
+                    <field name="state"
+                           widget="statusbar"
+                           statusbar_visible="active,removed"/>
+                </header>
+
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="candidate_name"/>
+                            <field name="email"/>
+                            <field name="phone"/>
+                            <field name="mobile"/>
+                        </group>
+
+                        <group>
+                            <field name="applicant_id"/>
+                            <field name="job_id"/>
+                            <field name="stage_id"/>
+                        </group>
+                    </group>
+
+                    <separator string="Blacklist Reasons"/>
+                    <group>
+                        <field name="reason_ids" widget="many2many_tags"/>
+                        <field name="other_reason"/>
+                        <field name="note"/>
+                    </group>
+
+                    <separator string="Blacklist Information"/>
+                    <group>
+                        <group>
+                            <field name="blacklisted_by"/>
+                            <field name="blacklisted_date"/>
+                        </group>
+
+                        <group>
+                            <field name="removed_by" invisible="state != 'removed'"/>
+                            <field name="removed_date" invisible="state != 'removed'"/>
+                            <field name="remove_reason" invisible="state != 'removed'"/>
+                        </group>
+                    </group>
+                </sheet>
+
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_recruitment_candidate_blacklist_search" model="ir.ui.view">
+        <field name="name">recruitment.candidate.blacklist.search</field>
+        <field name="model">recruitment.candidate.blacklist</field>
+        <field name="arch" type="xml">
+            <search string="Candidate Blacklist">
+                <field name="candidate_name"/>
+                <field name="email"/>
+                <field name="phone"/>
+                <field name="mobile"/>
+                <field name="job_id"/>
+                <field name="state"/>
+
+                <filter name="active_blacklist"
+                        string="Active Blacklist"
+                        domain="[('state','=','active')]"/>
+
+                <filter name="removed_blacklist"
+                        string="Removed"
+                        domain="[('state','=','removed')]"/>
+
+                <group expand="0" string="Group By">
+                    <filter name="group_by_state"
+                            string="Status"
+                            context="{'group_by':'state'}"/>
+                    <filter name="group_by_job"
+                            string="Applied Job"
+                            context="{'group_by':'job_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_recruitment_candidate_blacklist" model="ir.actions.act_window">
+        <field name="name">Candidate Blacklist List</field>
+        <field name="res_model">recruitment.candidate.blacklist</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_recruitment_candidate_blacklist_search"/>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <menuitem id="menu_recruitment_candidate_blacklist"
+              name="Candidate Blacklist List"
+              parent="hr_recruitment.menu_hr_recruitment_root"
+              action="action_recruitment_candidate_blacklist"
+              sequence="35"/>
+</odoo>

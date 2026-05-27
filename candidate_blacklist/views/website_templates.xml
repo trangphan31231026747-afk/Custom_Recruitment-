@@ -1,0 +1,29 @@
+<odoo>
+    <template id="job_application_error_blacklist" name="Job Application Blacklist Error">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure">
+                <div class="container my-5">
+                    <div class="modal fade show d-block" tabindex="-1" role="dialog" style="background: rgba(0, 0, 0, 0.45);">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Application Rejected</h5>
+                                </div>
+
+                                <div class="modal-body">
+                                    <p>Sorry, your application has been rejected.</p>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <a href="/jobs" class="btn btn-primary">
+                                        Back to Job List
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>
