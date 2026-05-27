@@ -1,0 +1,9 @@
+id,name,work_email,department_id/id,user_id/id,company_id/id
+EMP-001,Trần Thị Mai,mai@brightvision.vn,DEP-HR,USR-001,base.main_company
+EMP-002,Lê Minh Quân,quan@brightvision.vn,DEP-MKT,USR-002,base.main_company
+EMP-003,Phạm Gia Hân,han@brightvision.vn,DEP-DES,USR-003,base.main_company
+EMP-004,Võ Quốc Huy,huy@brightvision.vn,DEP-SALE,USR-004,base.main_company
+EMP-005,Nguyễn Thảo Vy,vy@brightvision.vn,DEP-CS,USR-005,base.main_company
+EMP-006,Đặng Minh Khang,khang@brightvision.vn,DEP-IT,USR-006,base.main_company
+EMP-007,Đặng Thu Hà,ha@brightvision.vn,DEP-ACC,USR-007,base.main_company
+EMP-008,Ngô Thượng Dân,thuongdan@brightvision.vn,DEP-BOD,USR-008,base.main_company

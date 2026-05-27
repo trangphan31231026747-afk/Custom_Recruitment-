@@ -1,0 +1,10 @@
+id,name,login,groups_id/id
+USR-001,Trần Thị Mai,mai@brightvision.vn,base.group_user
+USR-002,Lê Minh Quân,quan@brightvision.vn,base.group_user
+USR-003,Phạm Gia Hân,han@brightvision.vn,base.group_user
+USR-004,Võ Quốc Huy,huy@brightvision.vn,base.group_user
+USR-005,Nguyễn Thảo Vy,vy@brightvision.vn,base.group_user
+USR-006,Đặng Minh Khang,khang@brightvision.vn,base.group_user
+USR-007,Đặng Thu Hà,ha@brightvision.vn,base.group_user
+USR-008,Ngô Thượng Dân,thuongdan@brightvision.vn,base.group_user
+

@@ -1,0 +1,31 @@
+id,name,partner_name,email_from,partner_phone,job_id/id,department_id/id,user_id/id,stage_id/id,source_id
+CAN-001,Nguyễn Minh Anh - Recruitment Staff,Nguyễn Minh Anh,minh.anh@gmail.com,0912345678,JOB-HR01,DEP-HR,USR-001,hr_recruitment.stage_job1,LinkedIn
+CAN-002,Trần Gia Huy - Content Creator,Trần Gia Huy,giahuy@gmail.com,0987654321,JOB-MKT01,DEP-MKT,USR-001,hr_recruitment.stage_job2,Facebook
+CAN-003,Phạm Khánh Linh - Digital Marketing,Phạm Khánh Linh,khanhlinh@gmail.com,0934567812,JOB-MKT02,DEP-MKT,USR-001,hr_recruitment.stage_job3,TopCV
+CAN-004,Võ Đức Thành - Graphic Designer,Võ Đức Thành,ducthanh@gmail.com,0978123456,JOB-DES01,DEP-DES,USR-001,hr_recruitment.stage_job1,Referral
+CAN-005,Lê Hoàng Vy - Video Editor,Lê Hoàng Vy,hoangvy@gmail.com,0945678123,JOB-DES02,DEP-DES,USR-001,hr_recruitment.stage_job2,LinkedIn
+CAN-006,Đặng Quốc Bảo - Sales Executive,Đặng Quốc Bảo,quocbao@gmail.com,0967345128,JOB-SALE01,DEP-SALE,USR-001,hr_recruitment.stage_job0,TopCV
+CAN-007,Nguyễn Tuấn Kiệt - Customer Support,Nguyễn Tuấn Kiệt,tuankiet@gmail.com,0915678234,JOB-CS01,DEP-CS,USR-001,hr_recruitment.stage_job1,Facebook
+CAN-008,Trương Ngọc Mai - Accountant,Trương Ngọc Mai,ngocmai@gmail.com,0982345617,JOB-FIN01,DEP-ACC,USR-001,hr_recruitment.stage_job0,Referral
+CAN-009,Phan Nhật Minh - IT Support,Phan Nhật Minh,nhatminh@gmail.com,0937128456,JOB-IT01,DEP-IT,USR-001,hr_recruitment.stage_job2,LinkedIn
+CAN-010,Hồ Gia Linh - Backend Developer,Hồ Gia Linh,gialinh@gmail.com,0976234518,JOB-IT02,DEP-IT,USR-001,hr_recruitment.stage_job0,TopCV
+CAN-011,Bùi Thanh Tâm - Financial Analyst,Bùi Thanh Tâm,thanhtam@gmail.com,0948236715,JOB-FIN02,DEP-ACC,USR-001,hr_recruitment.stage_job1,Facebook
+CAN-012,Đỗ Hải Nam - Recruitment Staff,Đỗ Hải Nam,hainam.do@gmail.com,0961457823,JOB-HR01,DEP-HR,USR-001,hr_recruitment.stage_job0,Referral
+CAN-013,Lý Khánh Vy - Content Creator,Lý Khánh Vy,khanhvy.ly@gmail.com,0918456723,JOB-MKT01,DEP-MKT,USR-001,hr_recruitment.stage_job0,LinkedIn
+CAN-014,Nguyễn Quốc Đạt - Digital Marketing,Nguyễn Quốc Đạt,quocdat.nguyen@gmail.com,0984512376,JOB-MKT02,DEP-MKT,USR-001,hr_recruitment.stage_job0,TopCV
+CAN-015,Trần Minh Thư - Graphic Designer,Trần Minh Thư,minhthur.tran@gmail.com,0938456127,JOB-DES01,DEP-DES,USR-001,hr_recruitment.stage_job2,Facebook
+CAN-016,Vũ Hoàng Long - Video Editor,Vũ Hoàng Long,hoanglong.vu@gmail.com,0971458236,JOB-DES02,DEP-DES,USR-001,hr_recruitment.stage_job0,Referral
+CAN-017,Phạm Gia Bảo - Sales Executive,Phạm Gia Bảo,giabao.pham@gmail.com,0941567823,JOB-SALE01,DEP-SALE,USR-001,hr_recruitment.stage_job3,LinkedIn
+CAN-018,Lê Ngọc Hân - Customer Support,Lê Ngọc Hân,ngochan.le@gmail.com,0968234517,JOB-CS01,DEP-CS,USR-001,hr_recruitment.stage_job1,TopCV
+CAN-019,Đinh Khôi Nguyên - IT Support,Đinh Khôi Nguyên,khoinguyen.dinh@gmail.com,0912783456,JOB-IT01,DEP-IT,USR-001,hr_recruitment.stage_job2,Facebook
+CAN-020,Trương Đức Minh - Backend Developer,Trương Đức Minh,ducminh.truong@gmail.com,0987345612,JOB-IT02,DEP-IT,USR-001,hr_recruitment.stage_job0,Referral
+CAN-021,Nguyễn Hải Yến - Frontend Developer,Nguyễn Hải Yến,haiyen.nguyen@gmail.com,0923456781,JOB-IT03,DEP-IT,USR-001,hr_recruitment.stage_job3,LinkedIn
+CAN-022,Lê Minh Khoa - Frontend Developer,Lê Minh Khoa,minhkoa.le@gmail.com,0934567892,JOB-IT03,DEP-IT,USR-001,hr_recruitment.stage_job1,TopCV
+CAN-023,Phạm Thảo Nguyên - Administrative Assistant,Phạm Thảo Nguyên,thaonguyen.pham@gmail.com,0945678903,JOB-HR02,DEP-HR,USR-001,hr_recruitment.stage_job0,Facebook
+CAN-024,Trần Hoài An - Accountant,Trần Hoài An,hoaian.tran@gmail.com,0956789014,JOB-FIN01,DEP-ACC,USR-001,hr_recruitment.stage_job2,Referral
+CAN-025,Võ Minh Quân - Sales Executive,Võ Minh Quân,minhquan.vo@gmail.com,0967890125,JOB-SALE01,DEP-SALE,USR-001,hr_recruitment.stage_job1,LinkedIn
+CAN-026,Đỗ Nhật Hạ - Customer Support,Đỗ Nhật Hạ,nhatha.do@gmail.com,0978901236,JOB-CS01,DEP-CS,USR-001,hr_recruitment.stage_job3,TopCV
+CAN-027,Bùi Gia Hưng - Content Creator,Bùi Gia Hưng,giahung.bui@gmail.com,0989012347,JOB-MKT01,DEP-MKT,USR-001,hr_recruitment.stage_job3,TopCV
+CAN-028,Nguyễn Khánh Duy - Graphic Designer,Nguyễn Khánh Duy,khanhduy.nguyen@gmail.com,0910123458,JOB-DES01,DEP-DES,USR-001,hr_recruitment.stage_job1,TopCV
+CAN-029,Lý Bảo Trâm - Digital Marketing,Lý Bảo Trâm,baotram.ly@gmail.com,0921234569,JOB-MKT02,DEP-MKT,USR-001,hr_recruitment.stage_job0,LinkedIn
+CAN-030,Hoàng Đức Anh - Backend Developer,Hoàng Đức Anh,ducanh.hoang@gmail.com,0932345670,JOB-IT02,DEP-IT,USR-001,hr_recruitment.stage_job2,TopCV
