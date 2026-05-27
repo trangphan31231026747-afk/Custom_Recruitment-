@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Tree View -->
+    <record id="recruitment_request_view_tree" model="ir.ui.view">
+        <field name="name">recruitment.request.tree</field>
+        <field name="model">recruitment.request</field>
+        <field name="arch" type="xml">
+
+            <tree string="Recruitment Requests">
+
+                <field name="name"/>
+                <field name="job_position"/>
+                <field name="department_id"/>
+                <field name="quantity"/>
+                <field name="budget_amount"/>
+                <field name="hm_id"/>
+                <field name="hr_id"/>
+                <field name="ceo_id"/>
+                <field name="state"/>
+
+            </tree>
+
+        </field>
+    </record>
+
+
+    <!-- Form View -->
+    <record id="recruitment_request_view_form" model="ir.ui.view">
+        <field name="name">recruitment.request.form</field>
+        <field name="model">recruitment.request</field>
+        <field name="arch" type="xml">
+
+            <form string="Recruitment Request">
+
+                <header>
+
+                    <!-- HM -->
+                    <button name="action_send_to_hr"
+                            type="object"
+                            string="Send to HR"
+                            class="btn-primary"
+                            groups="recruitment_request_approval.group_recruitment_hm,base.group_system"
+                            invisible="state not in ('draft', 'need_revision')"/>
+
+                    <!-- HR -->
+                    <button name="action_hr_feedback"
+                            type="object"
+                            string="Send Feedback"
+                            groups="recruitment_request_approval.group_recruitment_hr,base.group_system"
+                            invisible="state != 'sent_hr'"/>
+
+                    <button name="action_send_to_ceo"
+                            type="object"
+                            string="Send to CEO"
+                            class="btn-primary"
+                            groups="recruitment_request_approval.group_recruitment_hr,base.group_system"
+                            invisible="state not in ('sent_hr', 'hr_feedback')"/>
+
+                    <!-- CEO -->
+                    <button name="action_ceo_approve"
+                            type="object"
+                            string="Approve"
+                            class="btn-primary"
+                            groups="recruitment_request_approval.group_recruitment_ceo,base.group_system"
+                            invisible="state != 'sent_ceo'"/>
+
+                    <button name="action_ceo_reject"
+                            type="object"
+                            string="Reject"
+                            groups="recruitment_request_approval.group_recruitment_ceo,base.group_system"
+                            invisible="state != 'sent_ceo'"/>
+
+                    <!-- Reset -->
+                    <button name="action_reset_to_draft"
+                            type="object"
+                            string="Reset to Draft"
+                            invisible="state not in ('rejected', 'hr_feedback')"/>
+
+                    <!-- Status -->
+                    <field name="state"
+                           widget="badge"
+                           decoration-info="state in ('draft', 'sent_hr')"
+                           decoration-warning="state in ('hr_feedback', 'sent_ceo')"
+                           decoration-success="state == 'approved'"
+                           decoration-danger="state == 'rejected'"/>
+
+                </header>
+
+                <sheet>
+
+                    <group>
+
+                        <group string="Request Information">
+
+                            <field name="name"/>
+                            <field name="department_id"/>
+                            <field name="job_position"/>
+                            <field name="quantity"/>
+                            <field name="expected_date"/>
+
+                        </group>
+
+                        <group string="Responsible Users">
+
+                            <field name="hm_id"/>
+                            <field name="hr_id"/>
+                            <field name="ceo_id"/>
+
+                        </group>
+
+                    </group>
+
+                    <group string="Request Details">
+
+                        <field name="reason"/>
+                        <field name="requirement"/>
+
+                    </group>
+
+                    <group string="Review Result">
+
+                        <field name="hr_feedback" readonly="1"/>
+                        <field name="budget_amount" readonly="1"/>
+                        <field name="budget_note" readonly="1"/>
+                        <field name="ceo_feedback" readonly="1"/>
+                        <field name="ceo_reject_reason" readonly="1"/>
+
+                    </group>
+
+                </sheet>
+
+                <chatter/>
+
+            </form>
+
+        </field>
+    </record>
+
+
+    <!-- Action -->
+    <record id="recruitment_request_action"
+            model="ir.actions.act_window">
+
+        <field name="name">Recruitment Requests</field>
+        <field name="res_model">recruitment.request</field>
+        <field name="view_mode">tree,form</field>
+
+    </record>
+
+</odoo>
