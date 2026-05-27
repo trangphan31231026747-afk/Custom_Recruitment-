@@ -8,7 +8,7 @@ class AssetPackage(models.Model):
     max_budget = fields.Float(string='Ngân sách tối đa (VND)', help='Mức ngân sách tối đa quy định cho gói này.')
     description = fields.Text(string='Ghi chú chung')
     
-    # Quan hệ 1-nhiều tới các chi tiết trong gói
+    
     line_ids = fields.One2many('asset.package.line', 'package_id', string='Chi tiết tài sản')
 
 class AssetPackageLine(models.Model):

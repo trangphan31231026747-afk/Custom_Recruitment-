@@ -25,7 +25,7 @@ class AssetHandover(models.Model):
                 vals['name'] = self.env['ir.sequence'].next_by_code('asset.handover') or 'HO-NEW'
         return super().create(vals_list)
 
-    # TUYỆT CHIÊU UC2: Chặn lỗi nếu chưa tick chữ ký
+    
     def action_confirm_handover(self):
         for record in self:
             if not record.has_physical_signature:

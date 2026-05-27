@@ -39,5 +39,5 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_asset_handover" name="Bàn Giao Tài Sản" parent="hr.menu_hr_root" action="action_asset_handover" sequence="5"/>
+    <menuitem id="menu_asset_handover" name="Asset Handovers" parent="hr.menu_hr_root" action="action_asset_handover" sequence="5"/>
 </odoo>

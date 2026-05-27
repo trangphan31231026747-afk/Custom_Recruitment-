@@ -37,5 +37,5 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_asset_package" name="Gói Tài Sản" parent="hr.menu_human_resources_configuration" action="action_asset_package" sequence="100"/>
+    <menuitem id="menu_asset_package" name="Asset Packages" parent="hr.menu_human_resources_configuration" action="action_asset_package" sequence="100"/>
 </odoo>
