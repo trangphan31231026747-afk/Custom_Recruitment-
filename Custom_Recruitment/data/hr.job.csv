@@ -1,0 +1,15 @@
+id,name,department_id/id,user_id/id,no_of_recruitment
+JOB-HR01,Recruitment Staff,DEP-HR,USR-001,1
+JOB-MKT01,Content Creator,DEP-MKT,USR-001,2
+JOB-MKT02,Digital Marketing,DEP-MKT,USR-001,1
+JOB-DES01,Graphic Designer,DEP-DES,USR-001,2
+JOB-DES02,Video Editor,DEP-DES,USR-001,1
+JOB-SALE01,Sales Executive,DEP-SALE,USR-001,2
+JOB-CS01,Customer Support,DEP-CS,USR-001,2
+JOB-IT01,IT Support,DEP-IT,USR-001,1
+JOB-FIN01,Accountant,DEP-ACC,USR-001,2
+JOB-FIN02,Financial Analyst,DEP-ACC,USR-001,1
+JOB-IT02,Backend Developer,DEP-IT,USR-001,2
+JOB-IT03,Frontend Developer,DEP-IT,USR-001,2
+JOB-HR02,Administrative Assistant,DEP-HR,USR-001,1
+
