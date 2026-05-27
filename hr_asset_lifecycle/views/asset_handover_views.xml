@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_asset_handover_form" model="ir.ui.view">
+        <field name="name">asset.handover.form</field>
+        <field name="model">asset.handover</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_confirm_handover" string="Xác nhận đã bàn giao" type="object" class="oe_highlight" invisible="state == 'in_use'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,in_use"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="employee_id" readonly="state == 'in_use'"/>
+                            <field name="package_id" readonly="state == 'in_use'"/>
+                        </group>
+                        <group>
+                            <field name="handover_date" readonly="state == 'in_use'"/>
+                            <field name="has_physical_signature" widget="boolean_toggle" readonly="state == 'in_use'"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_asset_handover" model="ir.actions.act_window">
+        <field name="name">Phiếu Bàn Giao Tài Sản</field>
+        <field name="res_model">asset.handover</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_asset_handover" name="Asset Handovers" parent="hr.menu_hr_root" action="action_asset_handover" sequence="5"/>
+</odoo>
