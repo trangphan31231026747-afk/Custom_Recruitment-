@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- FORM VIEW -->
+    <record id="hr_applicant_view_form_overdue"
+            model="ir.ui.view">
+
+        <field name="name">hr.applicant.form.overdue</field>
+
+        <field name="model">hr.applicant</field>
+
+        <field name="inherit_id"
+               ref="hr_recruitment.hr_applicant_view_form"/>
+
+        <field name="arch"
+               type="xml">
+
+            <xpath expr="//sheet"
+                   position="inside">
+
+                <widget name="web_ribbon"
+                        title="OVERDUE"
+                        bg_color="text-bg-danger"
+                        invisible="not is_overdue"/>
+
+            </xpath>
+
+            <xpath expr="//field[@name='priority']"
+                   position="after">
+
+                <field name="overdue_days"
+                       readonly="1"/>
+
+                <field name="is_overdue"
+                       readonly="1"/>
+
+            </xpath>
+
+        </field>
+
+    </record>
+
+
+    <!-- TREE VIEW -->
+    <record id="hr_applicant_tree_view_overdue"
+            model="ir.ui.view">
+
+        <field name="name">hr.applicant.tree.overdue</field>
+
+        <field name="model">hr.applicant</field>
+
+        <field name="inherit_id"
+               ref="hr_recruitment.crm_case_tree_view_job"/>
+
+        <field name="arch"
+               type="xml">
+
+            <xpath expr="//tree"
+                   position="attributes">
+
+                <attribute name="decoration-danger">
+                    is_overdue == True
+                </attribute>
+
+            </xpath>
+
+            <xpath expr="//field[@name='stage_id']"
+                   position="after">
+
+                <field name="overdue_days"/>
+
+                <field name="is_overdue"/>
+
+            </xpath>
+
+        </field>
+
+    </record>
+
+</odoo>
