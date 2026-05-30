@@ -2,14 +2,14 @@
     'name': 'HR Asset Lifecycle Management',
     'version': '17.0.1.0.0',
     'category': 'Human Resources',
-    'summary': 'Quản lý Gói tài sản và Bàn giao tài sản vật lý cho nhân sự (Odoo 17)',
+    'summary': 'Manage Asset Packages and Physical Asset Handover for employees (Odoo 17)',
     'description': """
-        Module hỗ trợ:
-        - Thiết lập gói tài sản theo chức danh (Asset Package).
-        - Ghi nhận trạng thái bàn giao tài sản vật lý có cam kết chữ ký.
+        Module features:
+        - Configure asset packages by job position (Asset Package).
+        - Record physical asset handover status with physical signature verification.
     """,
     'author': 'Your Name',
-    'depends': ['base', 'hr', 'hr_recruitment', 'product','mail'],
+    'depends': ['base', 'hr', 'hr_recruitment', 'product', 'mail'],
     'data': [
         'security/ir.model.access.csv',
         'views/asset_package_views.xml',

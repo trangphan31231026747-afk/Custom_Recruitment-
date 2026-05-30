@@ -1,4 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_asset_package_hr,access.asset.package.hr,model_asset_package,hr.group_hr_user,1,1,1,1
-access_asset_package_line_hr,access.asset.package.line.hr,model_asset_package_line,hr.group_hr_user,1,1,1,1
-access_asset_handover_hr,access.asset.handover.hr,model_asset_handover,hr.group_hr_user,1,1,1,1

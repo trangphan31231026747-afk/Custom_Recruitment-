@@ -2,20 +2,19 @@ from odoo import models, fields
 
 class AssetPackage(models.Model):
     _name = 'asset.package'
-    _description = 'Gói Tài Sản Onboarding'
+    _description = 'Onboarding Asset Package'
 
-    name = fields.Char(string='Tên Gói Tài Sản', required=True)
-    max_budget = fields.Float(string='Ngân sách tối đa (VND)', help='Mức ngân sách tối đa quy định cho gói này.')
-    description = fields.Text(string='Ghi chú chung')
+    name = fields.Char(string='Asset Package Name', required=True)
+    max_budget = fields.Float(string='Maximum Budget (VND)', help='The maximum budget allowed for this package.')
+    description = fields.Text(string='General Notes')
     
-    
-    line_ids = fields.One2many('asset.package.line', 'package_id', string='Chi tiết tài sản')
+    line_ids = fields.One2many('asset.package.line', 'package_id', string='Asset Lines')
 
 class AssetPackageLine(models.Model):
     _name = 'asset.package.line'
-    _description = 'Chi tiết Gói Tài Sản'
+    _description = 'Asset Package Line'
 
-    package_id = fields.Many2one('asset.package', string='Gói tài sản')
-    product_id = fields.Many2one('product.product', string='Tài sản / Thiết bị', required=True)
-    quantity = fields.Integer(string='Số lượng', default=1)
-    is_mandatory = fields.Boolean(string='Bắt buộc?', default=True)
+    package_id = fields.Many2one('asset.package', string='Asset Package')
+    product_id = fields.Many2one('product.product', string='Asset / Equipment', required=True)
+    quantity = fields.Integer(string='Quantity', default=1)
+    is_mandatory = fields.Boolean(string='Is Mandatory?', default=True)

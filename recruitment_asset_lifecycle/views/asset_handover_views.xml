@@ -6,7 +6,7 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <button name="action_confirm_handover" string="Xác nhận đã bàn giao" type="object" class="oe_highlight" invisible="state == 'in_use'"/>
+                    <button name="action_confirm_handover" string="Confirm Handover" type="object" class="oe_highlight" invisible="state == 'in_use'"/>
                     <field name="state" widget="statusbar" statusbar_visible="draft,in_use"/>
                 </header>
                 <sheet>
@@ -34,10 +34,10 @@
     </record>
 
     <record id="action_asset_handover" model="ir.actions.act_window">
-        <field name="name">Phiếu Bàn Giao Tài Sản</field>
+        <field name="name">Asset Handover Records</field>
         <field name="res_model">asset.handover</field>
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_asset_handover" name="Asset Handovers" parent="hr.menu_hr_root" action="action_asset_handover" sequence="5"/>
+    <menuitem id="menu_asset_handover" name="Asset Handover" parent="hr.menu_hr_root" action="action_asset_handover" sequence="5"/>
 </odoo>

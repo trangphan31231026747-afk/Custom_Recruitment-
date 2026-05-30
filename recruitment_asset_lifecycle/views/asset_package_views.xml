@@ -7,13 +7,13 @@
             <form>
                 <sheet>
                     <div class="oe_title">
-                        <h1><field name="name" placeholder="VD: Gói Standard Khối Back-Office"/></h1>
+                        <h1><field name="name" placeholder="e.g., Standard Back-Office Package"/></h1>
                     </div>
                     <group>
                         <field name="max_budget"/>
                     </group>
                     <notebook>
-                        <page string="Danh sách tài sản cấp phát">
+                        <page string="Asset Allocation List">
                             <field name="line_ids">
                                 <tree editable="bottom">
                                     <field name="product_id"/>
@@ -22,7 +22,7 @@
                                 </tree>
                             </field>
                         </page>
-                        <page string="Ghi chú">
+                        <page string="Notes">
                             <field name="description"/>
                         </page>
                     </notebook>
@@ -32,7 +32,7 @@
     </record>
 
     <record id="action_asset_package" model="ir.actions.act_window">
-        <field name="name">Gói Tài Sản Onboarding</field>
+        <field name="name">Asset Packages</field>
         <field name="res_model">asset.package</field>
         <field name="view_mode">tree,form</field>
     </record>
