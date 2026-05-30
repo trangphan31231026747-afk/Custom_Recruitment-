@@ -26,8 +26,8 @@ class RecruitmentRemoveBlacklistWizard(models.TransientModel):
 
         self.blacklist_id.write({
             "state": "removed",
-            "removed_reason": self.remove_reason,
-            "removed_by_id": self.env.user.id,
+            "remove_reason": self.remove_reason,
+            "removed_by": self.env.user.id,
             "removed_date": fields.Datetime.now(),
         })
 
